@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My file</title>
+</head>
+<body>
+
+	<p>Some stuff</p>
+	
+	<ul>
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+
+	<script type="text/javascript">
+		var tags = document.getElementsByTagName('li');
+		for (var i = 0; i < tags.length; i++) {
+			tags[i].style.color = "purple";
+		};
+
+		var pageNode = document.getElementsByTagName('body')[0];
+		var newNode = document.createElement('h1');
+		newNode.innerHTML = 'Hey!';
+		pageNode.appendChild(newNode);
+
+	</script>
+</body>
+</html>

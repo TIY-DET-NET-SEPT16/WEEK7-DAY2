@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Part Deux</title>
+	<script type="text/javascript">
+		function someFunction () {
+			document.write('Inside a function');
+		}
+
+		function anotherFunction (inputNumber) {
+			return 'Inside aother function ' + inputNumber;
+		}
+
+		function square (inputNumber) {
+			return inputNumber * inputNumber;
+		}
+
+		function multiply (inputNumber) {
+			var t = 2;
+			return inputNumber * testVar;
+		}
+
+		function boolTest(boolVar) {
+			if(boolVar)
+				return 'That is true';
+			else
+				return 'That is false';
+		}
+
+		function compareTest(input1, input2, input3) {
+			if(!input1)
+				return 'That is true';
+			else
+				return 'That is false';
+		}
+		
+		function dogInfo (dog) {
+			document.write('Name: ' + dog.Name +  ' is ' + dog.Age + ' years old');
+			document.write('<br/>');
+		}
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+/*
+		someFunction();
+		document.write('<br/>');
+		document.write(anotherFunction(5));
+		document.write('<br/>');
+		document.write(anotherFunction("five"));
+		document.write('<br/>');
+		document.write(anotherFunction(true));
+		document.write('<br/>');
+		document.write(square(5));
+		document.write('<br/>');
+		document.write(square(false));
+
+		document.write('<br/>');
+		document.write(multiply(2));
+
+		var testVar = 5;
+		document.write('<br/>');
+		document.write(multiply(3));
+
+		document.write('<br/>');
+		document.write(boolTest(true));
+
+		document.write('<br/>');
+		document.write(boolTest(false));
+
+		document.write('<br/>');
+		document.write(boolTest(20));
+
+		document.write('<br/>');
+		document.write(boolTest('hey'));
+
+		document.write('<br/>');
+		document.write(boolTest(''));
+
+		document.write('<br/>');
+		document.write(boolTest(null));
+
+		document.write('<br/>');
+		document.write(compareTest(5, '5'));
+		var bottlesOfBeer = 99;
+		while(bottlesOfBeer >= 0) {
+			document.write(bottlesOfBeer + ' bottles of beer on the wall');
+			document.write('<br/>');
+			bottlesOfBeer = bottlesOfBeer - 1;
+		}
+
+		for (var i = 99; i >= 0; i--) {
+			document.write(i + ' bottles of beer on the wall');
+			document.write('<br/>');
+		}
+
+
+		var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
+		var lotteryNumbers = [2, 5, 6, 54, 15, 24];
+		var favStuff = ['Dogs', 24, 'Firefly', 'Star Trek', 'Not Erin'];
+
+		for (var i = 0; i < favStuff.length; i++) {
+			document.write(favStuff[i]);
+			document.write('<br/>');
+		};
+
+		favStuff.push('Kitties');
+
+		for (var i = 0; i < favStuff.length; i++) {
+			document.write(favStuff[i]);
+			document.write('<br/>');
+		};
+
+		favStuff.splice(i, 1);
+
+		for (var i = 0; i < favStuff.length; i++) {
+			document.write(favStuff[i]);
+			document.write('<br/>');
+		};
+
+		var day;
+		switch (new Date().getDay()) {
+			case 0:
+				day = 'Sunday';
+				break;
+			case 1:
+				day = 'Monday';
+				break;
+			case 2:
+				day = 'Tuesday';
+				break;
+			case 3:
+				day = 'Wednesday';
+				break;
+			case 4:
+				day = 'Thursday';
+				break;
+			case 5:
+				day = 'Friday';
+				break;
+			case 6:
+				day = 'Saturday';
+				break;
+			default:
+				day = 'Uknown';
+		}
+
+		document.write('Today is ' + day);
+
+
+		var aboutMe = {
+			Hometown : 'Manchester',
+			HairColor : 'Red',
+			Likes : ['Dogs', 'Code'],
+			Birthday : { Month: 'October', Day: 24 }
+		}
+
+		aboutMe.Likes.push('Not Erin');
+
+		aboutMe.Hometown = 'Detroit';
+		document.write(aboutMe.Hometown);
+
+		document.write('<br/>');
+
+		aboutMe.EyeColor = 'Blue';
+		document.write(aboutMe.EyeColor);
+*/
+
+		var myDogs = [
+			{Name : 'Cashew', Age : 12},
+			{Name : 'Kaylee', Age : 1}
+		]
+
+		var dog1 = {
+			Name : 'Cashew',
+			Age: 12,
+			Color : 'Tan',
+			Likes: ['Being Crabby', 'Sleeping on the Couch'],
+			Bark: function() {
+				document.write('Woof');
+			}
+		}
+
+		document.write('<br/>');
+
+		//dogInfo(dog1);
+
+		myDogs.push(dog1);
+
+		for (var i = 0; i < myDogs.length; i++) {
+			dogInfo(myDogs[i]);
+		};
+
+		document.write('<br/>');
+
+		for (var i = 0; i < myDogs.length; i++) {
+			if (i === 2)
+				myDogs[i].Bark();
+		};
+	</script>
+</body>
+</html>
